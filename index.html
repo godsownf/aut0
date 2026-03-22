@@ -36,7 +36,7 @@
       const options = {
         domain: 'dev-vs3h28iu8djak7vo.us.auth0.com',
         clientID: 'apTSz2ZC1xp2Yz9IqFfwkozgnUW9IvCg',
-        redirectUri: 'http://localhost:443',
+        redirectUri: 'https://localhost:3000/',
         responseType: 'id_token'
       };
 
@@ -130,7 +130,7 @@
 
       logoutButton.addEventListener('click', () => {
         const webAuth = new auth0.WebAuth(options);
-        webAuth.logout({ returnTo: 'http://localhost:3000/login.html' });
+        webAuth.logout({ returnTo: 'http://localhost:3000/callback.html' });
       });
 
       window.onload = function() {
